@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find talented freelancers for web development, design, marketing, and more on FreelanceHub.">
+  <title>FreelanceHub — Find your next great freelancer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="freelancehub.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="FreelanceHub home">
+        <span class="logo-mark">F</span> Freelance<span>Hub</span>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#categories">Find Freelancers</a></li>
+        <li><a class="nav-link" href="#jobs">Find Jobs</a></li>
+        <li><a class="nav-link" href="#how-it-works">About</a></li>
+      </ul>
+      
+      <div class="auth-buttons">
+        <button class="btn btn-ghost" data-modal="loginModal">Log in</button>
+        <button class="btn btn-primary" data-modal="registerModal">Get started <span aria-hidden="true">↗</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span> THE FUTURE OF WORK IS FLEXIBLE
+          </div>
+          <h1>Great work starts<br>with <span>great people.</span></h1>
+          <p class="hero-description">Meet talented freelancers who can bring your next big idea to life. Find the right skills, build your team, and make things happen.</p>
+          
+          <form class="search-bar" id="searchForm">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <label class="sr-only" for="serviceSearch">Search services or freelancers</label>
+            <input id="serviceSearch" type="search" placeholder="Try “website design” or “developer”" autocomplete="off">
+            <button class="btn btn-primary search-button" type="submit">Search <span aria-hidden="true">→</span></button>
+          </form>
+          
+          <div class="popular-searches">
+            <span>Popular:</span>
+            <button type="button" data-search="Web Development">Web Development</button>
+            <button type="button" data-search="UI/UX Design">UI/UX Design</button>
+            <button type="button" data-search="Digital Marketing">Digital Marketing</button>
+          </div>
+          
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>AM</span><span>SK</span><span>RJ</span><span>+</span>
+            </div>
+            <div>
+              <strong>10,000+ professionals</strong>
+              <small>ready to work with you</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Freelance work illustration">
+          <div class="visual-backdrop"></div>
+          
+          <div class="floating-tag tag-top">
+            <span class="tag-icon purple">✦</span>
+            <span><strong>Top talent</strong><small>Handpicked for you</small></span>
+          </div>
+          
+          <div class="profile-showcase">
+            <div class="showcase-top">
+              <span class="online-dot"></span> AVAILABLE FOR WORK <span class="more-dots">•••</span>
+            </div>
+            <div class="showcase-person">
+              <div class="person-avatar avatar-lina">L</div>
+              <div>
+                <h3>Lina Ahmed</h3>
+                <p>Product Designer</p>
+                <div class="mini-rating">★ <b>4.9</b> <span>(86 reviews)</span></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <span>UI/UX Design</span><span>Prototyping</span><span>Figma</span>
+            </div>
+            <div class="showcase-bottom">
+              <div><small>Starting at</small><strong>$35 <small>/ hour</small></strong></div>
+              <button class="round-arrow" type="button" aria-label="View Lina's profile" data-profile="Lina Ahmed">↗</button>
+            </div>
+          </div>
+          
+          <div class="floating-tag tag-bottom">
+            <span class="tag-icon green">✓</span>
+            <span><strong>Project delivered!</strong><small>Another happy client</small></span>
+          </div>
+          
+          <div class="sparkle sparkle-one">✳</div>
+          <div class="sparkle sparkle-two">✦</div>
+        </div>
+      </div>
+      
+      <div class="container trust-strip">
+        <span>TRUSTED BY TEAMS AT</span>
+        <div class="trust-logos">
+          <b>orbit</b><b class="trust-serif">Northstar</b><b>◈ vertex</b><b class="trust-wide">cloud<span>nine</span></b><b>✳ bloom</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">EXPLORE OPPORTUNITIES</span>
+            <h2>What can we help you <span>build?</span></h2>
+            <p>Find the right expertise for every part of your project.</p>
+          </div>
+          <a href="#freelancers" class="text-link">Explore all services <span>→</span></a>
+        </div>
+        
+        <div class="category-grid" id="categoryGrid">
+          <button class="category-card" data-category="Web Development">
+            <span class="category-icon icon-lilac">⌘</span>
+            <span class="category-title">Web Development</span>
+            <span class="category-meta">1,240+ freelancers <b>↗</b></span>
+          </button>
+          <button class="category-card" data-category="Graphic Design">
+            <span class="category-icon icon-peach">✎</span>
+            <span class="category-title">Graphic Design</span>
+            <span class="category-meta">980+ freelancers <b>↗</b></span>
+          </button>
+          <button class="category-card" data-category="Mobile App Development">
+            <span class="category-icon icon-blue">▣</span>
+            <span class="category-title">Mobile App Development</span>
+            <span class="category-meta">760+ freelancers <b>↗</b></span>
+          </button>
+          <button class="category-card" data-category="Data Analysis">
+            <span class="category-icon icon-yellow">▥</span>
+            <span class="category-title">Data Analysis</span>
+            <span class="category-meta">540+ freelancers <b>↗</b></span>
+          </button>
+          <button class="category-card" data-category="Digital Marketing">
+            <span class="category-icon icon-mint">↗</span>
+            <span class="category-title">Digital Marketing</span>
+            <span class="category-meta">870+ freelancers <b>↗</b></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <span class="section-kicker">SIMPLE BY DESIGN</span>
+            <h2>Less searching. <span>More doing.</span></h2>
+            <p>Getting great work done should feel easy from day one.</p>
+          </div>
+        </div>
+        
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">⌕</div>
+            <h3>Describe your project</h3>
+            <p>Tell us what you need, your goals, and the skills you’re looking for.</p>
+          </article>
+          <article class="step-card featured-step">
+            <div class="step-number">02</div>
+            <div class="step-icon">♧</div>
+            <h3>Meet your match</h3>
+            <p>Compare profiles, explore portfolios, and connect with the right talent.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">✦</div>
+            <h3>Make great things</h3>
+            <p>Collaborate confidently and turn your ideas into finished work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Freelancers Section -->
+    <section class="section freelancers-section" id="freelancers">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">MEET YOUR NEXT COLLABORATOR</span>
+            <h2>Talent worth <span>knowing.</span></h2>
+            <p>Discover experienced professionals who love what they do.</p>
+          </div>
+          <a href="#freelancers" class="text-link" id="clearFilters">View all talent <span>→</span></a>
+        </div>
+        
+        <div class="filter-row">
+          <div class="filter-pills" id="filterPills">
+            <button class="filter-pill active" data-filter="All">All talent</button>
+            <button class="filter-pill" data-filter="Web Development">Development</button>
+            <button class="filter-pill" data-filter="Graphic Design">Design</button>
+            <button class="filter-pill" data-filter="Data Analysis">Data</button>
+            <button class="filter-pill" data-filter="Digital Marketing">Marketing</button>
+          </div>
+          <span class="result-count" id="resultCount">Showing 6 freelancers</span>
+        </div>
+        
+        <div class="freelancer-grid" id="freelancerGrid">
+          <!-- Freelancer Card 1 -->
+          <article class="freelancer-card" data-category="Web Development" data-keywords="web development full stack javascript react developer">
+            <div class="freelancer-cover cover-lavender">
+              <span class="cover-badge">TOP RATED</span>
+              <div class="portrait portrait-one">JA</div>
+            </div>
+            <div class="freelancer-info">
+              <div class="freelancer-name-row">
+                <div><h3>James Anderson</h3><p>Full-stack Developer</p></div>
+                <span class="save-button" role="button" tabindex="0" aria-label="Save James Anderson">♡</span>
+              </div>
+              <div class="freelancer-stats">
+                <span>★ <b>4.9</b> <small>(120)</small></span>
+                <span>12 projects</span>
+              </div>
+              <div class="card-divider"></div>
+              <div class="freelancer-price">
+                <span>From <strong>$40/hr</strong></span>
+                <button type="button" class="view-profile" data-profile="James Anderson">View profile ↗</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Freelancer Card 2 -->
+          <article class="freelancer-card" data-category="Graphic Design" data-keywords="graphic design brand identity illustration designer">
+            <div class="freelancer-cover cover-peach">
+              <span class="cover-badge">RISING TALENT</span>
+              <div class="portrait portrait-two">SM</div>
+            </div>
+            <div class="freelancer-info">
+              <div class="freelancer-name-row">
+                <div><h3>Sofia Martinez</h3><p>Brand & Visual Designer</p></div>
+                <span class="save-button" role="button" tabindex="0" aria-label="Save Sofia Martinez">♡</span>
+              </div>
+              <div class="freelancer-stats">
+                <span>★ <b>5.0</b> <small>(85)</small></span>
+                <span>9 projects</span>
+              </div>
+              <div class="card-divider"></div>
+              <div class="freelancer-price">
+                <span>From <strong>$32/hr</strong></span>
+                <button type="button" class="view-profile" data-profile="Sofia Martinez">View profile ↗</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Freelancer Card 3 -->
+          <article class="freelancer-card" data-category="Data Analysis" data-keywords="data analysis analytics sql python dashboards">
+            <div class="freelancer-cover cover-mint">
+              <span class="cover-badge">CLIENT FAVORITE</span>
+              <div class="portrait portrait-three">MK</div>
+            </div>
+            <div class="freelancer-info">
+              <div class="freelancer-name-row">
+                <div><h3>Marcus Kim</h3><p>Data Analyst</p></div>
+                <span class="save-button" role="button" tabindex="0" aria-label="Save Marcus Kim">♡</span>
+              </div>
+              <div class="freelancer-stats">
+                <span>★ <b>4.8</b> <small>(200)</small></span>
+                <span>24 projects</span>
+              </div>
+              <div class="card-divider"></div>
+              <div class="freelancer-price">
+                <span>From <strong>$38/hr</strong></span>
+                <button type="button" class="view-profile" data-profile="Marcus Kim">View profile ↗</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Freelancer Card 4 -->
+          <article class="freelancer-card" data-category="Digital Marketing" data-keywords="digital marketing seo social media content">
+            <div class="freelancer-cover cover-blue">
+              <span class="cover-badge">TOP RATED</span>
+              <div class="portrait portrait-four">AP</div>
+            </div>
+            <div class="freelancer-info">
+              <div class="freelancer-name-row">
+                <div><h3>Aisha Patel</h3><p>Growth Marketing Expert</p></div>
+                <span class="save-button" role="button" tabindex="0" aria-label="Save Aisha Patel">♡</span>
+              </div>
+              <div class="freelancer-stats">
+                <span>★ <b>4.9</b> <small>(96)</small></span>
+                <span>18 projects</span>
+              </div>
+              <div class="card-divider"></div>
+              <div class="freelancer-price">
+                <span>From <strong>$30/hr</strong></span>
+                <button type="button" class="view-profile" data-profile="Aisha Patel">View profile ↗</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Freelancer Card 5 -->
+          <article class="freelancer-card" data-category="Mobile App Development" data-keywords="mobile app development ios android flutter">
+            <div class="freelancer-cover cover-yellow">
+              <span class="cover-badge">EXPERT</span>
+              <div class="portrait portrait-five">OL</div>
+            </div>
+            <div class="freelancer-info">
+              <div class="freelancer-name-row">
+                <div><h3>Oliver Lewis</h3><p>Mobile App Developer</p></div>
+                <span class="save-button" role="button" tabindex="0" aria-label="Save Oliver Lewis">♡</span>
+              </div>
+              <div class="freelancer-stats">
+                <span>★ <b>4.9</b> <small>(74)</small></span>
+                <span>15 projects</span>
+              </div>
+              <div class="card-divider"></div>
+              <div class="freelancer-price">
+                <span>From <strong>$45/hr</strong></span>
+                <button type="button" class="view-profile" data-profile="Oliver Lewis">View profile ↗</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Freelancer Card 6 -->
+          <article class="freelancer-card" data-category="Graphic Design" data-keywords="ui ux design product designer figma prototype">
+            <div class="freelancer-cover cover-rose">
+              <span class="cover-badge">PRO VERIFIED</span>
+              <div class="portrait portrait-six">NH</div>
+            </div>
+            <div class="freelancer-info">
+              <div class="freelancer-name-row">
+                <div><h3>Noor Hassan</h3><p>UI/UX Product Designer</p></div>
+                <span class="save-button" role="button" tabindex="0" aria-label="Save Noor Hassan">♡</span>
+              </div>
+              <div class="freelancer-stats">
+                <span>★ <b>5.0</b> <small>(63)</small></span>
+                <span>11 projects</span>
+              </div>
+              <div class="card-divider"></div>
+              <div class="freelancer-price">
+                <span>From <strong>$35/hr</strong></span>
+                <button type="button" class="view-profile" data-profile="Noor Hassan">View profile ↗</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState" hidden>No freelancers matched your search. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="jobs">
+      <div class="container cta-box">
+        <div>
+          <span class="section-kicker">YOUR NEXT CHAPTER STARTS HERE</span>
+          <h2>Good work goes both ways.</h2>
+          <p>Whether you’re hiring or ready for your next project, there’s a place for you here.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn btn-light" data-modal="registerModal">I want to hire <span>↗</span></button>
+          <button class="btn btn-outline-light" data-modal="registerModal">I’m a freelancer <span>↗</span></button>
+        </div>
+        <div class="cta-decoration">✳</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="logo logo-light" href="#home"><span class="logo-mark">F</span> Freelance<span>Hub</span></a>
+        <p>Good people. Great work.<br>Better possibilities.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Discover</h4>
+        <a href="#categories">Categories</a>
+        <a href="#freelancers">Find freelancers</a>
+        <a href="#jobs">Find jobs</a>
+      </div>
+      <div class="footer-column">
+        <h4>FreelanceHub</h4>
+        <a href="#how-it-works">How it works</a>
+        <a href="#home">About us</a>
+        <a href="#home">Contact</a>
+      </div>
+      <div class="footer-column footer-newsletter">
+        <h4>Get the good stuff</h4>
+        <p>Ideas, opportunities, and updates. No noise.</p>
+        <form id="newsletterForm">
+          <label class="sr-only" for="newsletterEmail">Your email address</label>
+          <input id="newsletterEmail" type="email" placeholder="Your email address" required>
+          <button aria-label="Subscribe to newsletter" type="submit">→</button>
+        </form>
+        <small id="newsletterMessage" aria-live="polite"></small>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> FreelanceHub. Made for good work.</span>
+      <div>
+        <a href="#home">Privacy</a>
+        <a href="#home">Terms</a>
+        <a href="#home">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Modals -->
+  <div class="modal-backdrop" id="loginModal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal-close" data-close aria-label="Close dialog">×</button>
+      <span class="section-kicker">WELCOME BACK</span>
+      <h2 id="loginTitle">Log in to FreelanceHub</h2>
+      <p>Pick up where your next great project begins.</p>
+      <form class="auth-form" data-demo-form>
+        <label>Email address<input type="email" placeholder="you@example.com" required></label>
+        <label>Password<input type="password" placeholder="Enter your password" minlength="6" required></label>
+        <button class="btn btn-primary full-button" type="submit">Log in</button>
+      </form>
+      <small class="demo-note">Demo interface — authentication is not connected.</small>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="registerModal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+      <button class="modal-close" data-close aria-label="Close dialog">×</button>
+      <span class="section-kicker">LET’S GET STARTED</span>
+      <h2 id="registerTitle">Create your free account</h2>
+      <p>Join a community built around meaningful work.</p>
+      <form class="auth-form" data-demo-form>
+        <label>Your name<input type="text" placeholder="Full name" required></label>
+        <label>Email address<input type="email" placeholder="you@example.com" required></label>
+        <label>I want to
+          <select required>
+            <option value="">Choose an option</option>
+            <option>Hire a freelancer</option>
+            <option>Find freelance work</option>
+          </select>
+        </label>
+        <button class="btn btn-primary full-button" type="submit">Create account</button>
+      </form>
+      <small class="demo-note">Demo interface — account creation is not connected.</small>
+    </section>
+  </div>
+  
+  <!-- External JS -->
+  <script src="freelancehub.js"></script>
+</body>
+</html>
